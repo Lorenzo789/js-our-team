@@ -32,6 +32,8 @@
 // Scott Estrada	Developer	            scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg
 
+
+// * MILESTONE 0 * \\
 const teamArray = [
     {
         nome: "Wayne Barnett",
@@ -70,8 +72,19 @@ const teamArray = [
 
     },
 ];
+// * MILESTONE 0 * \\
 
+
+// * MILESTONE 1 * \\
 for (let index = 0; index < teamArray.length; index++) {
 
-    
+    console.log(`
+        ${teamArray[index].nome}  
+        ${teamArray[index].ruolo}  
+        ${teamArray[index].foto}`
+    );
+
 }
+// * MILESTONE 1 * \\
+
+// * MILESTONE 2 * \\
