@@ -102,7 +102,7 @@ function createElement(member) {
     newElement.innerHTML = `<div class="mt-4">
         <pre class="fw-bold">${member.name}</pre>
         <pre class="fw-bold">${member.role}</pre>
-        <img src="${member.image}" alt="">
+        <img src="./img/${member.image}" alt="">
     </div>`
     return newElement;
 }
