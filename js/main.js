@@ -32,7 +32,6 @@
 // Scott Estrada	Developer	            scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg
 
-
 // * MILESTONE 0 * \\
 const teamArray = [
     {
@@ -68,7 +67,7 @@ const teamArray = [
     {
         nome: "Barbara Ramos",
         ruolo: "Graphic Designer",
-        foto: " barbara-ramos-graphic-designer.jpg"
+        foto: "barbara-ramos-graphic-designer.jpg"
 
     },
 ];
@@ -81,10 +80,30 @@ for (let index = 0; index < teamArray.length; index++) {
     console.log(`
         ${teamArray[index].nome}  
         ${teamArray[index].ruolo}  
-        ${teamArray[index].foto}`
-    );
+        ${teamArray[index].foto}
+    `);
 
 }
 // * MILESTONE 1 * \\
 
 // * MILESTONE 2 * \\
+
+
+
+
+
+
+
+
+
+
+// ! FUNCTION ! \\
+function createElement(elementParent, newElement) {
+    const elementParent = document.getElementById('parent-wrapper');
+    const newElement = document.createElement('div');
+    newElement.innerHtml = `<div>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+    </div>`
+}
