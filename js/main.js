@@ -83,6 +83,9 @@ for (let index = 0; index < teamArray.length; index++) {
         ${teamArray[index].foto}
     `);
 
+    const newElement = createElement(teamArray[index]);
+    const parentWrapper = appendParent(newElement);    
+    console.log(newElement);
 }
 // * MILESTONE 1 * \\
 
@@ -98,12 +101,21 @@ for (let index = 0; index < teamArray.length; index++) {
 
 
 // ! FUNCTION ! \\
-function createElement(elementParent, newElement) {
-    const elementParent = document.getElementById('parent-wrapper');
+function createElement(member) {
     const newElement = document.createElement('div');
     newElement.innerHtml = `<div>
         <pre></pre>
         <pre></pre>
         <pre></pre>
     </div>`
+    return newElement;
+}
+
+function appendParent(element) {
+    
+    const parentElement = document.getElementById('parent-wrapper');
+
+    parentElement.append(element);
+
+    return parentElement;
 }
