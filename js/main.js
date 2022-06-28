@@ -70,3 +70,8 @@ const teamArray = [
 
     },
 ];
+
+for (let index = 0; index < teamArray.length; index++) {
+
+    
+}
