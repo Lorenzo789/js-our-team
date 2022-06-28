@@ -77,16 +77,12 @@ const teamArray = [
 // * MILESTONE 1 * \\
 for (let index = 0; index < teamArray.length; index++) {
 
-    console.log(`
-        ${teamArray[index].name}  
-        ${teamArray[index].role}  
-        ${teamArray[index].image}
-    `);
-
     // * MILESTONE 2 * \\
     const newElement = createElement(teamArray[index]);
     appendParent(newElement);    
     // * MILESTONE 2 * \\
+
+    console.log(teamArray[index]);
 }
 // * MILESTONE 1 * \\
 
@@ -106,7 +102,7 @@ function createElement(member) {
     newElement.innerHTML = `<div class="mt-4">
         <pre class="fw-bold">${member.name}</pre>
         <pre class="fw-bold">${member.role}</pre>
-        <pre class="fw-bold">${member.image}</pre>
+        <img src="${member.image}" alt="">
     </div>`
     return newElement;
 }
