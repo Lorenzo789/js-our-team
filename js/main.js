@@ -88,7 +88,15 @@ for (let index = 0; index < teamArray.length; index++) {
 
 
 
-
+{/* < div class="col" >
+<div class="card h-100">
+    <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+</div>
+</div> */}
 
 
 
@@ -98,12 +106,17 @@ for (let index = 0; index < teamArray.length; index++) {
 // ! FUNCTION ! \\
 function createElement(member) {
     const newElement = document.createElement('div');
-    newElement.className = ('col-6');
-    newElement.innerHTML = `<div class="mt-4">
-        <pre class="fw-bold">${member.name}</pre>
-        <pre class="fw-bold">${member.role}</pre>
-        <img src="./img/${member.image}" alt="">
+    newElement.className = ('col-4 ms_margin');
+    newElement.innerHTML = `<div class=" card h-100">
+        <img class="card-img-top" src="./img/${member.image}" alt="">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Name</h5>
+            <p class="card-text">${member.name}</p>
+            <h5 class="card-title fw-bold">Role</h5>
+            <p class="card-text">${member.role}</p>
+        </div>
     </div>`
+
     return newElement;
 }
 
