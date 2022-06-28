@@ -35,39 +35,39 @@
 // * MILESTONE 0 * \\
 const teamArray = [
     {
-        nome: "Wayne Barnett",
-        ruolo: "Founder & CEO",
-        foto: "wayne-barnett-founder-ceo.jpg"
+        name: "Wayne Barnett",
+        role: "Founder & CEO",
+        image: "wayne-barnett-founder-ceo.jpg"
 
     },
     {
-        nome: "Angela Caroll",
-        ruolo: "Chief Editor",
-        foto: "angela-caroll-chief-editor.jpg"
+        name: "Angela Caroll",
+        role: "Chief Editor",
+        image: "angela-caroll-chief-editor.jpg"
 
     },
     {
-        nome: "Walter Gordon",
-        ruolo: "Office Manager",
-        foto: "walter-gordon-office-manager.jpg"
+        name: "Walter Gordon",
+        role: "Office Manager",
+        image: "walter-gordon-office-manager.jpg"
 
     },
     {
-        nome: "Angela Lopez",
-        ruolo: "Social Media Manager",
-        foto: "angela-lopez-social-media-manager.jpg"
+        name: "Angela Lopez",
+        role: "Social Media Manager",
+        image: "angela-lopez-social-media-manager.jpg"
 
     },
     {
-        nome: "Scott Estrada",
-        ruolo: "Developer",
-        foto: "scott-estrada-developer.jpg"
+        name: "Scott Estrada",
+        role: "Developer",
+        image: "scott-estrada-developer.jpg"
 
     },
     {
-        nome: "Barbara Ramos",
-        ruolo: "Graphic Designer",
-        foto: "barbara-ramos-graphic-designer.jpg"
+        name: "Barbara Ramos",
+        role: "Graphic Designer",
+        image: "barbara-ramos-graphic-designer.jpg"
 
     },
 ];
@@ -78,18 +78,17 @@ const teamArray = [
 for (let index = 0; index < teamArray.length; index++) {
 
     console.log(`
-        ${teamArray[index].nome}  
-        ${teamArray[index].ruolo}  
-        ${teamArray[index].foto}
+        ${teamArray[index].name}  
+        ${teamArray[index].role}  
+        ${teamArray[index].image}
     `);
 
+    // * MILESTONE 2 * \\
     const newElement = createElement(teamArray[index]);
-    const parentWrapper = appendParent(newElement);    
-    console.log(newElement);
+    appendParent(newElement);    
+    // * MILESTONE 2 * \\
 }
 // * MILESTONE 1 * \\
-
-// * MILESTONE 2 * \\
 
 
 
@@ -103,10 +102,11 @@ for (let index = 0; index < teamArray.length; index++) {
 // ! FUNCTION ! \\
 function createElement(member) {
     const newElement = document.createElement('div');
-    newElement.innerHtml = `<div>
-        <pre></pre>
-        <pre></pre>
-        <pre></pre>
+    newElement.className = ('col-6');
+    newElement.innerHTML = `<div class="mt-4">
+        <pre class="fw-bold">${member.name}</pre>
+        <pre class="fw-bold">${member.role}</pre>
+        <pre class="fw-bold">${member.image}</pre>
     </div>`
     return newElement;
 }
@@ -119,3 +119,4 @@ function appendParent(element) {
 
     return parentElement;
 }
+// ! FUNCTION ! \\
